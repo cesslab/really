@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+  Results
+{% endblock %}
+
+{% block content %}
+  <p>Question {{ task_num }} was chosen at random for payment.</p>
+  <p>Your investment for this question was {{ investment }}.</p>
+  <p>In question {{ task_num }} the random number drawn was {{ random }}.<p>
+  <p>{% if success %} Your project was successful {% else %} Your will lose your investment of {{ investment }}.{% endif %}</p>
+  <p>Your payoff for this question is {{ final_payoff }}</p>
+
+    {% next_button %}
+{% endblock %}
+
+

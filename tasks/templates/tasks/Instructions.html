@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+  Instructions
+{% endblock %}
+
+{% block content %}
+  <p>This part of the experiment consists of two questions. One of the two questions will be
+chosen at random for payment. Once everyone has made their choices we will toss a
+coin to decide the question we will pay for. If Heads comes up question 1 will be
+    chosen, if Tails comes up it will be question 2.</p>
+<p>Tokens earned from either of the selected questions will be converted into US dollars
+using the rate 1 token = 1 cent and added to you payment in the main part of the
+  experiment.</p>
+    {% next_button %}
+
+{% endblock %}

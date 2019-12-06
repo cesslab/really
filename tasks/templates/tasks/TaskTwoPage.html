@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+  Question 2
+{% endblock %}
+
+{% block content %}
+  <div>
+    <p>You are endowed with 200 tokens ($2). You can choose to invest any number of tokens
+      in a risky project. Tokens that are not invested in the risky project are also yours to keep.</p>
+    <p>The risky project has a <b>40%</b> chance of success. If the project is successful, you will
+      receive <b>3 times the amount of tokens you chose to invest.</b> If the project is unsuccessful,
+      you will lose the amount invested. We will roll a 10 sided die to determine the outcome.
+      If faces 1-4 come up then your investment is successful. If faces 5-10 come up then you
+      will lose your investment and receive only the amount not invested in the project.</p>
+    <p>Please choose how many tokens you want to invest in the risky project (any number of
+      tokens between 0 and 200, including 0 or 200).</p>
+  </div>
+
+  <div>
+    {% formfields %}
+  </div>
+
+    {% next_button %}
+
+{% endblock %}
